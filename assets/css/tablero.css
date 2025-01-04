@@ -1,0 +1,152 @@
+.map {
+  text-align: center;
+}
+.map img {
+  max-width: 60px;
+}
+
+
+
+.detail-content {
+  display: none;
+}
+.map img {
+  width: 50px; /* Ajusta el tamaño según tus necesidades */
+  height: auto;
+}
+.btn-download {
+  border-radius: 5px;
+  background-color: #096784;
+  color: white;
+  margin-right: 5px;
+}
+.btn-download:hover {
+  border-radius: 5px;
+  background-color: #43a5cc;
+  color: white;
+  margin-right: 5px;
+}
+
+.btn-disabled {
+  border-radius: 5px;
+  background-color: #d2dcdf;
+  color: white;
+  margin-right: 5px;
+  /* pointer-events: none; */
+}
+
+.btn-disabled:hover {
+  border-radius: 5px;
+  background-color: #43a5cc;
+  color: white;
+  margin-right: 5px;
+}
+.horizontal-icons img {
+  width: 40px;
+}
+
+
+.detail-content {
+  display: none;
+}
+.map img {
+  width: 50px; /* Ajusta el tamaño según tus necesidades */
+  height: auto;
+}
+.btn-download {
+  border-radius: 5px;
+  background-color: #096784;
+  color: white;
+  margin-right: 5px;
+}
+.btn-disabled {
+  border-radius: 5px;
+  background-color: #d2dcdf;
+  color: white;
+  margin-right: 5px;
+  pointer-events: none;
+}
+.table-no-border {
+  border-collapse: collapse;
+}
+.table-no-border td,
+.table-no-border th {
+  border: none;
+}
+.horizontal-icons img {
+  cursor: pointer;
+  margin-right: 10px;
+}
+.vertical-menu .nav-link {
+  border-radius: 0;
+  border-bottom: 1px solid gray;
+}
+.vertical-menu .nav-link.active {
+  background-color: #d2dcdf;
+}
+
+.table-hover>tbody>tr:hover>* {
+  background: none;
+}
+
+/* 
+.detail-view:hover {
+  background: #f5f7f7;
+}
+.detail-view {
+  background: #f5f7f7;
+} */
+
+
+/* Estilo personalizado para el fondo de la fila cuando se pasa el cursor */
+.table-hover tbody tr.detail-view:hover {
+  background-color: #f5f7f7; /* Color de fondo personalizado */
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f5f7f7; /* Color de fondo personalizado */
+}
+
+/* Sobrescribir la variable CSS de Bootstrap para el fondo al pasar el cursor */
+:root {
+  --bs-table-hover-bg:#f5f7f7; /* Color de fondo blanco */
+}
+
+/* Estilo personalizado para asegurar que el fondo de la fila cambie al pasar el cursor */
+.table {
+  background-color: var(--bs-table-hover-bg) !important; /* Usar la variable personalizada */
+}
+
+
+.info {
+  margin: 15px;
+}
+
+.bootstrap-table .fixed-table-container .table td.contenido-adicional {
+  vertical-align: top;
+}
+
+/* Sobrescribir la variable CSS de Bootstrap para el fondo al pasar el cursor */
+.table-hover tbody tr:hover {
+  --bs-table-hover-bg: #ffffff !important; /* Color de fondo blanco */
+}
+
+/* Estilo personalizado para asegurar que el fondo de la fila cambie al pasar el cursor */
+.table-hover tbody tr:hover {
+  background-color: var(--bs-table-hover-bg) !important; /* Usar la variable personalizada */
+}
+
+td.contenido-adicional.first-column {
+  width: 25%;
+}
+
+td.contenido-adicional.second-column {
+  width: 75%;
+}
+
+td.contenido-adicional {
+  padding: 20px;
+}
+
+
+

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Data Dashboard</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .accordion-button {
+      font-weight: bold;
+    }
+    .accordion-button:not(.collapsed) {
+      background-color: #007bff;
+      color: #fff;
+    }
+    .nav-link {
+      padding-left: 1.5rem;
+    }
+    .disabled {
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Columna 1</th>
+            <th scope="col">Columna 2</th>
+            <th scope="col">Columna 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="accordion" id="accordionExample1">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne1">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1">
+                      Subitem 1
+                    </button>
+                  </h2>
+                  <div id="collapseOne1" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                      <ul class="nav flex-column">
+                        <li class="nav-item">
+                          <a class="nav-link active" href="#">Item 1.1</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Item 1.2</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="accordion" id="accordionExample2">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne2">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne2">
+                      Subitem 2
+                    </button>
+                  </h2>
+                  <div id="collapseOne2" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                      <ul class="nav flex-column">
+                        <li class="nav-item">
+                          <a class="nav-link active" href="#">Item 2.1</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Item 2.2</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="accordion" id="accordionExample3">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne3">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne3">
+                      Subitem 3
+                    </button>
+                  </h2>
+                  <div id="collapseOne3" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                      <ul class="nav flex-column">
+                        <li class="nav-item">
+                          <a class="nav-link active" href="#">Item 3.1</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Item 3.2</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
