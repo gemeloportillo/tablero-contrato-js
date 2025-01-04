@@ -47,85 +47,121 @@ function downloadFormatter(value, row, index) {
 }
 
 function changeMenu(icon, entidad) {
-  $.getJSON('assets/data/data1.json', function(data) {
-    const entidadData = data.find(item => item.entidad.toLowerCase() === entidad.replace(' ', '-'));
-    const menus = entidadData.menus;
+  const menus = {
+    aguascalientes: {
+      icon1: ["Información", "Punto de Contacto", "Adicionales"],
+      icon2: ["Información General", "Presupuesto", "Solicitudes de Cotizaciones", "Documentos", "Hitos"],
+      icon3: ["Información General", "Artículos","Juntas de aclaraciones", "Licitantes","Documentos", "Hitos", "Modificaciones"],
+      icon4: ["Información General", "Proveedores", "Artículos", "Documentos", "Modificaciones"],
+      icon5: ["Datos generales del contrato", "Artículos del contrato","Garantías", "Documentos","Ejecución", "Hitos", "Modificaciones"],
+    },
+    "baja california": {
+      icon1: ["Información", "Punto de Contacto", "Adicionales"],
+      icon2: ["Información General", "Presupuesto", "Solicitudes de Cotizaciones", "Documentos", "Hitos"],
+      icon3: ["Información General", "Artículos","Juntas de aclaraciones", "Licitantes","Documentos", "Hitos", "Modificaciones"],
+      icon4: ["Información General", "Proveedores", "Artículos", "Documentos", "Modificaciones"],
+      icon5: ["Datos generales del contrato", "Artículos del contrato","Garantías", "Documentos","Ejecución", "Hitos", "Modificaciones"],
+    },
+    chiapas: {
+      icon1: ["Información", "Punto de Contacto", "Adicionales"],
+      icon2: ["Información General", "Presupuesto", "Solicitudes de Cotizaciones", "Documentos", "Hitos"],
+      icon3: ["Información General", "Artículos","Juntas de aclaraciones", "Licitantes","Documentos", "Hitos", "Modificaciones"],
+      icon4: ["Información General", "Proveedores", "Artículos", "Documentos", "Modificaciones"],
+      icon5: ["Datos generales del contrato", "Artículos del contrato","Garantías", "Documentos","Ejecución", "Hitos", "Modificaciones"],
+    }
+  };
 
-    // Clear existing menu items
-    const menu = $(`#menu-${entidad}`);
-    menu.empty();
+  // Clear existing menu items
+  const menu = $(`#menu-${entidad}`);
+  menu.empty();
 
-    // Add new menu items based on the selected icon
-    Object.entries(menus).forEach(([key, value]) => {
-      menu.append(`<li class="nav-item"><a class="nav-link" href="#" onclick="changeTabContent('${key}', '${entidad}')">${value.title}</a></li>`);
-    });
-
-    // Change tab content to the selected icon initially
-    changeTabContent(icon, entidad);
+  // Add new menu items based on the selected icon
+  menus[entidad][icon].forEach(item => {
+    menu.append(`<li class="nav-item"><a class="nav-link" href="#" onclick="changeTabContent('${item}', '${entidad}')">${item}</a></li>`);
   });
 }
 
 function initializeMenus() {
   ['aguascalientes', 'baja-california', 'chiapas'].forEach(entidad => {
-    changeMenu('parties', entidad);
+    changeMenu('icon1', entidad);
   });
 }
 
-function changeTabContent(icon, entidad) {
-  $.getJSON('assets/data/data1.json', function(data) {
-    const entidadData = data.find(item => item.entidad.toLowerCase() === entidad.replace(' ', '-'));
-    const menuContent = entidadData.menus[icon];
-
-    let tabContent = `
-      <h4><img src="/assets/imgs/${menuContent.icon}" alt="Info" style="width: 24px; height: 24px;"> ${menuContent.title}</h4>
-      <div class="accordion" id="accordionDetail">
-    `;
-
-    menuContent.content.forEach((section, index) => {
-      tabContent += `
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="heading${index}">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${index}" aria-expanded="false" aria-controls="collapse${index}">
-              ${section.accordionTitle}
-            </button>
-          </h2>
-          <div id="collapse${index}" class="accordion-collapse collapse" aria-labelledby="heading${index}" data-bs-parent="#accordionDetail">
-            <div class="accordion-body">
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <th>${icon === 'parties' ? 'Rol' : 'Nombre'}</th>
-                    <th>Descripción</th>
-                    <th>Opciones</th>
-                  </tr>
-                </thead>
-                <tbody>
-      `;
-
-      section.rows.forEach(row => {
-        tabContent += `
-          <tr>
-            <td>${row[icon === 'parties' ? 'rol' : 'nombre']}</td>
-            <td>${row.descripcion}</td>
-            <td>${row.opciones}</td>
-          </tr>
-        `;
-      });
-
-      tabContent += `
-                </tbody>
-              </table>
-            </div>
+function changeTabContent(title, entidad) {
+  const tabContent = `
+   
+    <h4><img src="/assets/imgs/ico_parties.svg" alt="Info" style="width: 24px; height: 24px;"> ${title}</h4>
+    <div class="accordion" id="accordionDetail">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            Roles
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionDetail">
+          <div class="accordion-body">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Rol</th>
+                  <th>Descripción</th>
+                  <th>Opciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Admin</td>
+                  <td>Administrador del sistema</td>
+                  <td>Editar, Eliminar</td>
+                </tr>
+                <tr>
+                  <td>Usuario</td>
+                  <td>Usuario regular</td>
+                  <td>Editar, Eliminar</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
-      `;
-    });
-
-    tabContent += `</div>`;
-    $(`#v-pills-tabContent-${entidad}`).html(tabContent);
-  });
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Miembros
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionDetail">
+          <div class="accordion-body">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Descripción</th>
+                  <th>Opciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Juan Pérez</td>
+                  <td>Miembro del equipo</td>
+                  <td>Editar, Eliminar</td>
+                </tr>
+                <tr>
+                  <td>Maria López</td>
+                  <td>Miembro del equipo</td>
+                  <td>Editar, Eliminar</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+  $(`#v-pills-tabContent-${entidad}`).html(tabContent);
 }
 
+// Call initializeMenus on page load
 $(document).ready(function() {
   initializeMenus();
 });
