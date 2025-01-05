@@ -100,19 +100,19 @@ small {
 .input-group {
     position: relative;
     border-radius: 25px;
-  }
+}
 
-  /* Estilos base del input */
-  .input-group .form-control {
+/* Estilos base del input */
+.input-group .form-control {
     border: 1px solid #94638d;
     border-radius: 25px !important;
     background-color: #f2f0f2;
     color: #bc798d;
     padding: 0.5rem 3rem 0.5rem 1rem;
-  }
+}
 
-  /* Remover estilos del input group text */
-  .input-group-text {
+/* Remover estilos del input group text */
+.input-group-text {
     position: absolute;
     right: 0;
     top: 0;
@@ -123,303 +123,304 @@ small {
     display: flex;
     align-items: center;
     padding: 0 1rem;
-  }
+}
 
-  /* Control de visibilidad del spinner */
-  .loading {
+/* Control de visibilidad del spinner */
+.loading {
     display: none;
-  }
+}
 
-  /* Color del ícono */
-  .input-group-text i {
+/* Color del ícono */
+.input-group-text i {
     color: #94638d;
-  }
+}
 
-  /* Estados focus del input */
-  .input-group .form-control:focus {
+/* Estados focus del input */
+.input-group .form-control:focus {
     border-width: 2px;
     border-color: #94638d;
     color: #5f5e6d;
     box-shadow: none;
     background-color: white !important;
-  }
+}
 
-  /* Estado hover del input con halo más ancho */
-  .input-group .form-control:hover {
+/* Estado hover del input con halo más ancho */
+.input-group .form-control:hover {
     box-shadow: 0 0 0 4px rgba(148, 99, 141, 0.25);
-  }
+}
 
-  /* Para asegurar que el fondo blanco tenga prioridad en focus */
-  .input-group .form-control:focus,
-  .form-control:focus {
+/* Para asegurar que el fondo blanco tenga prioridad en focus */
+.input-group .form-control:focus,
+.form-control:focus {
     background-color: white;
-  }
+}
 
 
 
 
-  /******** Estilos para los checkboxes ***************/
+/******** Estilos para los checkboxes ***************/
 /* Estilos para los checkboxes */
 .form-check {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 .form-check-input {
-  width: 1.2rem;
-  height: 1.2rem;
-  margin-right: 0.5rem;
-  border: 2px solid #94638d;
-  background-color: #f2f0f2;
-  cursor: pointer;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 0.5rem;
+    border: 2px solid #94638d;
+    background-color: #f2f0f2;
+    cursor: pointer;
 }
 
 .form-check-input:checked {
-  background-color: #94638d;
-  border-color: #94638d;
+    background-color: #94638d;
+    border-color: #94638d;
 }
 
 .form-check-input:hover {
-  box-shadow: 0 0 0 4px rgba(148, 99, 141, 0.25);
+    box-shadow: 0 0 0 4px rgba(148, 99, 141, 0.25);
 }
 
 .form-check-input:focus {
-  border-color: #94638d;
-  box-shadow: none;
+    border-color: #94638d;
+    box-shadow: none;
 }
 
 /* Estilos para las etiquetas */
 .form-check label {
-  color: #5f5e6d;
-  cursor: pointer;
-  font-size: 0.9rem;
-  display: inline-flex;
-  align-items: center;
-  margin-bottom: 0.5rem;
+    color: #5f5e6d;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
 }
 
 .form-check strong {
-  color: #94638d;
-  margin-left: 0.25rem;
+    color: #94638d;
+    margin-left: 0.25rem;
 }
 
 /* Estilos unificados para los botones */
 .btn-primary {
-  background-color: #94638d;
-  border-color: #94638d;
-  color: white;
-  transition: all 0.3s ease;
-  border-radius: 25px !important;
-  padding: 0.5rem 1rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 38px; /* Para igualar altura con el input */
+    background-color: #94638d;
+    border-color: #94638d;
+    color: white;
+    transition: all 0.3s ease;
+    border-radius: 25px !important;
+    padding: 0.5rem 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 38px;
+    /* Para igualar altura con el input */
 }
 
 .btn-primary:hover:not(:disabled) {
-  background-color: #bc798d;
-  border-color: #bc798d;
-  box-shadow: 0 0 0 4px rgba(148, 99, 141, 0.25);
+    background-color: #bc798d;
+    border-color: #bc798d;
+    box-shadow: 0 0 0 4px rgba(148, 99, 141, 0.25);
 }
 
 .btn-primary:focus {
-  background-color: #94638d;
-  border-color: #94638d;
-  box-shadow: 0 0 0 4px rgba(148, 99, 141, 0.25);
+    background-color: #94638d;
+    border-color: #94638d;
+    box-shadow: 0 0 0 4px rgba(148, 99, 141, 0.25);
 }
 
 .btn-primary:disabled {
-  background-color: #f2f0f2;
-  border-color: #94638d;
-  color: #94638d;
-  opacity: 0.7;
+    background-color: #f2f0f2;
+    border-color: #94638d;
+    color: #94638d;
+    opacity: 0.7;
 }
 
 /* Estilos para los iconos en los botones */
 .btn i {
-  font-size: 0.9rem;
+    font-size: 0.9rem;
 }
 
 /* Ajustes específicos para el contenedor de checkboxes */
 .form-check-inline {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-right: 0;
 }
 
 /* Asegurar que los botones pequeños mantengan el estilo */
 .btn-sm {
-  padding: 0.5rem 1rem;
-  font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
 }
 
 /* Ajuste adicional para el grupo de botones */
 .d-flex.flex-column.gap-2 .btn {
-  margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 
 
 /* Eliminar bordes por defecto del tooltip */
 .d3plus-tooltip-tbody tr {
-  border: none !important;
+    border: none !important;
 }
 
 .d3plus-tooltip-tbody td {
-  border: none !important;
+    border: none !important;
 }
 
 /* Asegurar que solo nuestra línea personalizada sea visible */
 .d3plus-tooltip-title {
-  border-bottom: none !important;
+    border-bottom: none !important;
 }
 
 
 
 /* Sobrescritura de las clases de color para la leyenda */
 .color-box.bg-gray {
-  background-color: #f1eff1 !important;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #f1eff1 !important;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .color-box.bg-yellow {
-  background-color: hsl(44, 96%, 78%) !important;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: hsl(44, 96%, 78%) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .color-box.bg-orange {
-  background-color: hsl(27, 73%, 65%) !important;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: hsl(27, 73%, 65%) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .color-box.bg-red {
-  background-color: hsl(347, 48%, 49%) !important;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: hsl(347, 48%, 49%) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .color-box {
-  width: 20px;
-  height: 20px;
-  border-radius: 4px;
-  margin-right: 8px;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    margin-right: 8px;
 }
 
 
 
 /* ESTILOS NUEVOS CHECKBOXES */
 .checkbox-group {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  width: 100%;
-  margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    margin: 1rem 0;
 }
 
 .checkbox-input {
-  clip: rect(0 0 0 0);
-  clip-path: inset(100%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 }
 
-.checkbox-input:checked + .checkbox-tile {
-  border-color: #94638d;
-  box-shadow: 0 5px 10px rgba(148, 99, 141, 0.2);
-  color: #94638d;
+.checkbox-input:checked+.checkbox-tile {
+    border-color: #94638d;
+    box-shadow: 0 5px 10px rgba(148, 99, 141, 0.2);
+    color: #94638d;
 }
 
-.checkbox-input:checked + .checkbox-tile:before {
-  transform: scale(1);
-  opacity: 1;
-  background-color: #94638d;
-  border-color: #94638d;
+.checkbox-input:checked+.checkbox-tile:before {
+    transform: scale(1);
+    opacity: 1;
+    background-color: #94638d;
+    border-color: #94638d;
 }
 
-.checkbox-input:checked + .checkbox-tile .checkbox-icon,
-.checkbox-input:checked + .checkbox-tile .checkbox-label {
-  color: #94638d;
+.checkbox-input:checked+.checkbox-tile .checkbox-icon,
+.checkbox-input:checked+.checkbox-tile .checkbox-label {
+    color: #94638d;
 }
 
-.checkbox-input:focus + .checkbox-tile {
-  border-color: #94638d;
-  box-shadow: 0 5px 10px rgba(148, 99, 141, 0.2),
-              0 0 0 4px rgba(148, 99, 141, 0.25);
+.checkbox-input:focus+.checkbox-tile {
+    border-color: #94638d;
+    box-shadow: 0 5px 10px rgba(148, 99, 141, 0.2),
+        0 0 0 4px rgba(148, 99, 141, 0.25);
 }
 
 .checkbox-tile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  width: 200px;
-  min-height: 180px;
-  border-radius: 15px;
-  border: 2px solid #f2f0f2;
-  background-color: white;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  transition: 0.15s ease;
-  cursor: pointer;
-  position: relative;
-  padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    min-height: 180px;
+    border-radius: 15px;
+    border: 2px solid #f2f0f2;
+    background-color: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.15s ease;
+    cursor: pointer;
+    position: relative;
+    padding: 1rem;
 }
 
 .checkbox-tile:before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 1.25rem;
-  height: 1.25rem;
-  border: 2px solid #bc798d;
-  background-color: white;
-  border-radius: 50%;
-  top: 0.25rem;
-  left: 0.25rem;
-  opacity: 0;
-  transform: scale(0);
-  transition: 0.25s ease;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='192' height='192' fill='%23FFFFFF' viewBox='0 0 256 256'%3E%3Crect width='256' height='256' fill='none'%3E%3C/rect%3E%3Cpolyline points='216 72.005 104 184 48 128.005' fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-width='32'%3E%3C/polyline%3E%3C/svg%3E");
-  background-size: 12px;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid #bc798d;
+    background-color: white;
+    border-radius: 50%;
+    top: 0.25rem;
+    left: 0.25rem;
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.25s ease;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='192' height='192' fill='%23FFFFFF' viewBox='0 0 256 256'%3E%3Crect width='256' height='256' fill='none'%3E%3C/rect%3E%3Cpolyline points='216 72.005 104 184 48 128.005' fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-width='32'%3E%3C/polyline%3E%3C/svg%3E");
+    background-size: 12px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
 }
 
 .checkbox-tile:hover {
-  border-color: #bc798d;
+    border-color: #bc798d;
 }
 
 .checkbox-tile:hover:before {
-  transform: scale(1);
-  opacity: 1;
+    transform: scale(1);
+    opacity: 1;
 }
 
 .checkbox-icon {
-  transition: 0.375s ease;
-  color: #5f5e6d;
-  margin-bottom: 0.5rem;
-  flex: 0 0 auto;
+    transition: 0.375s ease;
+    color: #5f5e6d;
+    margin-bottom: 0.5rem;
+    flex: 0 0 auto;
 }
 
 .checkbox-label {
-  color: #5f5e6d;
-  transition: 0.375s ease;
-  text-align: center;
-  font-size: 0.9rem;
-  line-height: 1.2;
-  margin-top: 0.5rem;
-  flex: 1 1 auto;
-  display: flex;
-  align-items: flex-start;
+    color: #5f5e6d;
+    transition: 0.375s ease;
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    margin-top: 0.5rem;
+    flex: 1 1 auto;
+    display: flex;
+    align-items: flex-start;
 }
 
 /* Hover states */
 .checkbox-tile:hover .checkbox-icon,
 .checkbox-tile:hover .checkbox-label {
-  color: #bc798d;
+    color: #bc798d;
 }
 
 
@@ -427,100 +428,103 @@ small {
 /************* Estilos para el tooltip personalizado ****************/
 /* Estilos base del tooltip */
 .checkbox {
-  position: relative;
+    position: relative;
 }
 
 .checkbox:hover .custom-tooltip {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(-10px);
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-10px);
 }
 
 .custom-tooltip {
-  position: absolute;
-  bottom: 98%;
-  left: -98%;
-  transform: translateX(-50%);
-  padding: 12px;
-  background: #fbfbfb;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  font-size: 12px;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  width: max-content;
-  max-width: 600px;
-  z-index: 1000;
-  border: 1px solid #bc798d;
+    position: absolute;
+    bottom: 98%;
+    left: -98%;
+    transform: translateX(-50%);
+    padding: 12px;
+    background: #fbfbfb;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    width: max-content;
+    max-width: 600px;
+    z-index: 1000;
+    border: 1px solid #bc798d;
 }
 
 /* Título del tooltip */
 .custom-tooltip-title {
-  width: 100%;
-  font-size: 14px;
-  font-weight: bold;
-  color: #94638d;
-  margin: 0;
-  margin-bottom: 10px;
-  text-align: left;
-  padding-bottom: 8px;
-  border-bottom: 2px solid rgba(148, 99, 141, 0.8);
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    color: #94638d;
+    margin: 0;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(148, 99, 141, 0.8);
 }
 
 /* Contenido del tooltip */
 .custom-tooltip-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
 .tooltip-label {
-  color: #5f5e6d;
-  margin-right: 5px;
+    color: #5f5e6d;
+    margin-right: 5px;
 }
 
 .tooltip-description {
-  color: #94638d;
-  flex: 1;
+    color: #94638d;
+    flex: 1;
 }
 
 .custom-tooltip::before,
 .custom-tooltip::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .custom-tooltip::before {
-  bottom: -9px; /* Ligeramente más abajo que el triángulo interior */
-  border-left: 9px solid transparent;
-  border-right: 9px solid transparent;
-  border-top: 9px solid rgba(148, 99, 141, 0.8); /* Color del borde, usando el mismo del título */
+    bottom: -9px;
+    /* Ligeramente más abajo que el triángulo interior */
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 9px solid rgba(148, 99, 141, 0.8);
+    /* Color del borde, usando el mismo del título */
 }
 
 .custom-tooltip::after {
-  bottom: -8px;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-top: 8px solid white; /* Color interior del tooltip */
+    bottom: -8px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid white;
+    /* Color interior del tooltip */
 }
 
 /* Estilos para asegurar que el texto fluya correctamente */
 .tooltip-label,
 .tooltip-description {
-  display: inline-block;
-  vertical-align: top;
+    display: inline-block;
+    vertical-align: top;
 }
 
 /* Ajustes de espaciado y alineación */
 .custom-tooltip-content {
-  line-height: 1.4;
+    line-height: 1.4;
 }
 
 .tooltip-description {
-  text-align: justify;
+    text-align: justify;
 }
 
 
@@ -528,173 +532,173 @@ small {
 /* TOOLTIP CON ICONO DE IFORMACIÓN */
 /* Contenedor del título */
 .title-container {
-  position: relative;
-  margin-bottom: 2rem;
+    position: relative;
+    margin-bottom: 2rem;
 }
 
 /* Estilos del título principal */
 .heading-with-tooltip {
-  position: relative;
-  text-align: center;
-  color: #5f5e6d;
-  width: 100%;
-  display: inline-block;
-  margin: 0;
-  padding: 0;
+    position: relative;
+    text-align: center;
+    color: #5f5e6d;
+    width: 100%;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
 }
 
 .heading-text {
-  border-bottom: 1px dotted #94638d;
-  padding-bottom: 2px;
-  cursor: help;
+    border-bottom: 1px dotted #94638d;
+    padding-bottom: 2px;
+    cursor: help;
 }
 
 /* Ícono de información */
 .heading-info-icon {
-  color: #57B5DC;
-  margin-left: 8px;
-  font-size: 0.8em;
-  cursor: help;
+    color: #57B5DC;
+    margin-left: 8px;
+    font-size: 0.8em;
+    cursor: help;
 }
 
 /* Contenedor del tooltip */
 .heading-tooltip-container {
-  position: absolute;
-  left: 50%;
-  top: 80%;
-  transform: translateX(-50%) translateY(10px);
-  width: 80%;
-  max-width: 800px;
-  background: #fbfbfb;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 12px;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  z-index: 1000;
-  margin-top: 20px;
-  font-size: 13px;
-  border: 1px solid #79afbc;
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translateX(-50%) translateY(10px);
+    width: 80%;
+    max-width: 800px;
+    background: #fbfbfb;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    margin-top: 20px;
+    font-size: 13px;
+    border: 1px solid #79afbc;
 }
 
 /* Encabezado del tooltip */
 .heading-tooltip-header {
-  font-size: 14px;
-  font-weight: bold;
-  color: #638494;
-  margin-bottom: 10px;
-  padding-bottom: 8px;
-  border-bottom: 2px solid rgba(99, 130, 148, 0.8);
-  text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    color: #638494;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(99, 130, 148, 0.8);
+    text-align: left;
 }
 
 /* Contenido del tooltip */
 .heading-tooltip-body {
-  padding: 0 8px;
+    padding: 0 8px;
 }
 
 .heading-tooltip-label {
-  color: #5f5e6d;
-  display: block;
-  margin-bottom: 8px;
-  text-align: left;
+    color: #5f5e6d;
+    display: block;
+    margin-bottom: 8px;
+    text-align: left;
 }
 
 .heading-tooltip-list {
-  list-style-type: disc;
-  padding-left: 20px;
-  margin: 10px 0;
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 10px 0;
 }
 
 .heading-tooltip-list li {
-  color: #638694;
-  margin-bottom: 8px;
-  line-height: 1.4;
-  text-align: justify;
-  font-weight: normal;
+    color: #638694;
+    margin-bottom: 8px;
+    line-height: 1.4;
+    text-align: justify;
+    font-weight: normal;
 }
 
 /* Flecha del tooltip */
 .heading-tooltip-container::before,
 .heading-tooltip-container::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .heading-tooltip-container::before {
-  top: -9px;
-  border-bottom: 9px solid rgba(99, 126, 148, 0.8);
-  border-left: 9px solid transparent;
-  border-right: 9px solid transparent;
+    top: -9px;
+    border-bottom: 9px solid rgba(99, 126, 148, 0.8);
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
 }
 
 .heading-tooltip-container::after {
-  top: -8px;
-  border-bottom: 8px solid white;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
+    top: -8px;
+    border-bottom: 8px solid white;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
 }
 
 /* Mostrar tooltip al hover */
 .heading-with-tooltip:hover .heading-tooltip-container {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(-50%) translateY(0);
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
 }
 
 
 .col.contrato {
-  padding-left: 100px;
+    padding-left: 100px;
 }
 
 /* Ajustes responsivos */
 @media (max-width: 768px) {
-  .heading-tooltip-container {
-    width: 95%;
-  }
+    .heading-tooltip-container {
+        width: 95%;
+    }
 
-  .heading-with-tooltip {
-    font-size: 1.5rem;
-  }
+    .heading-with-tooltip {
+        font-size: 1.5rem;
+    }
 
-  .heading-info-icon {
-    font-size: 0.7em;
-  }
+    .heading-info-icon {
+        font-size: 0.7em;
+    }
 }
 
 #exportButton {
-  transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 /* Animación de carga durante la exportación */
 #exportButton.loading {
-  pointer-events: none;
-  opacity: 0.7;
+    pointer-events: none;
+    opacity: 0.7;
 }
 
 #exportButton.loading i {
-  animation: fa-spin 2s infinite linear;
+    animation: fa-spin 2s infinite linear;
 }
 
 .progress {
-  background-color: rgba(0,0,0,0.1);
-  border-radius: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 0;
 }
 
 .progress-bar {
-  background-color: #28a745;
+    background-color: #28a745;
 }
 
 #exportAllButton {
-  transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 #exportAllButton:not(:disabled):hover {
-  transform: translateY(-1px);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -708,28 +712,33 @@ img.ico-tablero {
 
 input.form-control.search-input {
     border: 1px solid #43A5CC;
-    background: #F5F7F7;
+    background: #f0f6f9;
     border-radius: 40px;
 }
+
 .fixed-table-toolbar {
     display: flex;
     justify-content: center;
     flex-direction: row-reverse;
     margin-bottom: 1rem;
 }
+
 .fixed-table-toolbar button.btn.btn-secondary {
     border-radius: 20px;
     background-color: #57B5DC;
     border: none;
 }
+
 .float-right.search.btn-group {
     width: 80%;
 }
+
 button.btn.btn-disabled {
     border: 1px solid #ccc;
     background: #D2DCDF;
     /* color: #fff; */
 }
+
 .info {
     /* margin: 15px; */
     background: #edf6fa;
@@ -737,22 +746,55 @@ button.btn.btn-disabled {
     border-radius: 15px;
     border: 1px solid #43A5CC;
 }
+
 .bootstrap-table .fixed-table-container .table thead th {
     background: #F0F6F9;
     color: #096784;
 }
+
 .bootstrap-table .fixed-table-container .table td {
     border-top: 1px solid #dee8ea;
 }
+
 .bootstrap-table .fixed-table-container .table tr.detail-view td {
     border-top: none;
 }
+
 .bootstrap-table .fixed-table-container .table tr.detail-view:hover {
     background-color: red;
 }
+
 .accordion-button:not(.collapsed) {
     background: #bbe1ee;
 }
-.accordion-button{
+
+.accordion-button {
     background: #f6fdff;
 }
+
+.horizontal-icons {
+    margin-bottom: 5px;
+}
+
+.horizontal-icons img.active {
+    border-bottom: 5px solid #57b5dc;
+    padding-bottom: 5px;
+}
+.horizontal-icons img {
+    border-bottom: 5px solid #f0f6f9;
+    padding-bottom: 5px;
+}
+
+#detalle-contrato th {
+    background: #bbe1ee;
+    padding: 10px 5px;
+}
+.bi-check-circle-fill.text-success {
+    color: #0cc243;
+    font-size: 1.25em; /* Ajusta el tamaño según sea necesario */
+  }
+  .bi-check-circle-fill::before {
+    content: "\f26a";
+    color: #0cc243;
+}
+  

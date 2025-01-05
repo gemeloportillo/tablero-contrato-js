@@ -79,7 +79,8 @@
 }
 .vertical-menu .nav-link {
   border-radius: 0;
-  border-bottom: 1px solid #43a5cc;
+  border-bottom: 1px solid #57b5dc;
+  color: #096784;
 }
 .vertical-menu .nav-link.active {
   background-color: #d2dcdf;
@@ -153,6 +154,11 @@ td.contenido-adicional.second-column {
 
 td.contenido-adicional {
   padding: 20px;
+}
+
+.nav-pills .nav-link.active { 
+  background-color: #57b5dc; 
+  /* Cambia esto por el color que prefieras */ color: white; 
 }
 
 

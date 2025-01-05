@@ -51,23 +51,23 @@ function changeMenu(icon, entidad) {
     aguascalientes: {
       ico_parties: ["Información de actores", "Punto de Contacto", "Punto de Contacto Adicional"],
       ico_planning: ["Información de Planeación", "Presupuesto", "Solicitudes de Cotizaciones", "Documentos de planeación", "Hitos de planeación"],
-      ico_tender: ["Información de Contratación", "Artículos","Juntas de aclaraciones", "Licitantes","Documentos de contratación", "Hitos de contratación pública", "Modificaciones de contratación pública"],
+      ico_tender: ["Información de Contratación", "Artículos", "Juntas de aclaraciones", "Licitantes", "Documentos de contratación", "Hitos de contratación pública", "Modificaciones de contratación pública"],
       ico_awards: ["Información de Adjudicación", "Proveedores", "Artículos", "Documentos de adjudicación", "Modificaciones de adjudicación"],
-      ico_contracts: ["Datos generales del contrato", "Artículos del contrato","Garantías", "Documentos","Ejecución", "Hitos", "Modificaciones"],      
+      ico_contracts: ["Datos generales del contrato", "Artículos del contrato", "Garantías", "Documentos", "Ejecución", "Hitos", "Modificaciones"],
     },
-    "baja california": { 
+    "baja california": {
       ico_parties: ["Información de actores", "Punto de Contacto", "Punto de Contacto Adicional"],
       ico_planning: ["Información de Planeación", "Presupuesto", "Solicitudes de Cotizaciones", "Documentos de planeación", "Hitos de planeación"],
-      ico_tender: ["Información de Contratación", "Artículos","Juntas de aclaraciones", "Licitantes","Documentos de contratación", "Hitos de contratación pública", "Modificaciones de contratación pública"],
+      ico_tender: ["Información de Contratación", "Artículos", "Juntas de aclaraciones", "Licitantes", "Documentos de contratación", "Hitos de contratación pública", "Modificaciones de contratación pública"],
       ico_awards: ["Información de Adjudicación", "Proveedores", "Artículos", "Documentos de adjudicación", "Modificaciones de adjudicación"],
-      ico_contracts: ["Datos generales del contrato", "Artículos del contrato","Garantías", "Documentos","Ejecución", "Hitos", "Modificaciones"],      
+      ico_contracts: ["Datos generales del contrato", "Artículos del contrato", "Garantías", "Documentos", "Ejecución", "Hitos", "Modificaciones"],
     },
-    chiapas: { 
+    chiapas: {
       ico_parties: ["Información de actores", "Punto de Contacto", "Punto de Contacto Adicional"],
       ico_planning: ["Información de Planeación", "Presupuesto", "Solicitudes de Cotizaciones", "Documentos de planeación", "Hitos de planeación"],
-      ico_tender: ["Información de Contratación", "Artículos","Juntas de aclaraciones", "Licitantes","Documentos de contratación", "Hitos de contratación pública", "Modificaciones de contratación pública"],
+      ico_tender: ["Información de Contratación", "Artículos", "Juntas de aclaraciones", "Licitantes", "Documentos de contratación", "Hitos de contratación pública", "Modificaciones de contratación pública"],
       ico_awards: ["Información de Adjudicación", "Proveedores", "Artículos", "Documentos de adjudicación", "Modificaciones de adjudicación"],
-      ico_contracts: ["Datos generales del contrato", "Artículos del contrato","Garantías", "Documentos","Ejecución", "Hitos", "Modificaciones"],      
+      ico_contracts: ["Datos generales del contrato", "Artículos del contrato", "Garantías", "Documentos", "Ejecución", "Hitos", "Modificaciones"],
     }
   };
 
@@ -79,7 +79,19 @@ function changeMenu(icon, entidad) {
   menus[entidad][icon].forEach(item => {
     menu.append(`<li class="nav-item"><a class="nav-link" href="#" onclick="changeTabContent('${item}', '${entidad}')">${item}</a></li>`);
   });
+
+  // Add event listener for the new items
+  menu.find('.nav-link').on('click', function() {
+    menu.find('.nav-link').removeClass('active');
+    $(this).addClass('active');
+  });
+
+  // Update active icon
+  $(`.horizontal-icons img`).removeClass('active');
+  $(`.horizontal-icons img[alt="${icon}"]`).addClass('active');
 }
+
+
 
 function initializeMenus() {
   ['aguascalientes', 'baja-california', 'chiapas'].forEach(entidad => {
@@ -89,7 +101,6 @@ function initializeMenus() {
 
 function changeTabContent(title, entidad) {
   const tabContent = `
-   
     <h4><img src="/assets/imgs/ico_parties.svg" alt="Info" style="width: 24px; height: 24px;"> ${title}</h4>
     <div class="accordion" id="accordionDetail">
       <div class="accordion-item">
@@ -160,6 +171,12 @@ function changeTabContent(title, entidad) {
   `;
   $(`#v-pills-tabContent-${entidad}`).html(tabContent);
 }
+
+// Call initializeMenus on page load
+$(document).ready(function() {
+  initializeMenus();
+});
+
 
 // Call initializeMenus on page load
 $(document).ready(function() {
