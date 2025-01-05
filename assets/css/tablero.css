@@ -79,7 +79,7 @@
 }
 .vertical-menu .nav-link {
   border-radius: 0;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #43a5cc;
 }
 .vertical-menu .nav-link.active {
   background-color: #d2dcdf;
@@ -115,12 +115,9 @@
 /* Estilo personalizado para asegurar que el fondo de la fila cambie al pasar el cursor */
 .table {
   background-color: var(--bs-table-hover-bg) !important; /* Usar la variable personalizada */
+  border: 1px solid white;
 }
 
-
-.info {
-  margin: 15px;
-}
 
 .bootstrap-table .fixed-table-container .table td.contenido-adicional {
   vertical-align: top;
@@ -128,20 +125,30 @@
 
 /* Sobrescribir la variable CSS de Bootstrap para el fondo al pasar el cursor */
 .table-hover tbody tr:hover {
-  --bs-table-hover-bg: #ffffff !important; /* Color de fondo blanco */
+  --bs-table-hover-bg: #f0f6f9 !important; /* Color de fondo blanco */
+}
+/* Sobrescribir la variable CSS de Bootstrap para el fondo al pasar el cursor */
+.table-hover tbody tr.detail-view:hover {
+  --bs-table-hover-bg: #fff !important; /* Color de fondo blanco */
 }
 
 /* Estilo personalizado para asegurar que el fondo de la fila cambie al pasar el cursor */
 .table-hover tbody tr:hover {
   background-color: var(--bs-table-hover-bg) !important; /* Usar la variable personalizada */
+  background-color: #666;
+
+}
+.accordion {
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(24, 190, 231, 0.25) !important;
 }
 
+
 td.contenido-adicional.first-column {
-  width: 25%;
+  width: 28%;
 }
 
 td.contenido-adicional.second-column {
-  width: 75%;
+  width: 72%;
 }
 
 td.contenido-adicional {

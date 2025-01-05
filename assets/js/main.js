@@ -49,25 +49,25 @@ function downloadFormatter(value, row, index) {
 function changeMenu(icon, entidad) {
   const menus = {
     aguascalientes: {
-      icon1: ["Información", "Punto de Contacto", "Adicionales"],
-      icon2: ["Información General", "Presupuesto", "Solicitudes de Cotizaciones", "Documentos", "Hitos"],
-      icon3: ["Información General", "Artículos","Juntas de aclaraciones", "Licitantes","Documentos", "Hitos", "Modificaciones"],
-      icon4: ["Información General", "Proveedores", "Artículos", "Documentos", "Modificaciones"],
-      icon5: ["Datos generales del contrato", "Artículos del contrato","Garantías", "Documentos","Ejecución", "Hitos", "Modificaciones"],
+      ico_parties: ["Información de actores", "Punto de Contacto", "Punto de Contacto Adicional"],
+      ico_planning: ["Información de Planeación", "Presupuesto", "Solicitudes de Cotizaciones", "Documentos de planeación", "Hitos de planeación"],
+      ico_tender: ["Información de Contratación", "Artículos","Juntas de aclaraciones", "Licitantes","Documentos de contratación", "Hitos de contratación pública", "Modificaciones de contratación pública"],
+      ico_awards: ["Información de Adjudicación", "Proveedores", "Artículos", "Documentos de adjudicación", "Modificaciones de adjudicación"],
+      ico_contracts: ["Datos generales del contrato", "Artículos del contrato","Garantías", "Documentos","Ejecución", "Hitos", "Modificaciones"],      
     },
-    "baja california": {
-      icon1: ["Información", "Punto de Contacto", "Adicionales"],
-      icon2: ["Información General", "Presupuesto", "Solicitudes de Cotizaciones", "Documentos", "Hitos"],
-      icon3: ["Información General", "Artículos","Juntas de aclaraciones", "Licitantes","Documentos", "Hitos", "Modificaciones"],
-      icon4: ["Información General", "Proveedores", "Artículos", "Documentos", "Modificaciones"],
-      icon5: ["Datos generales del contrato", "Artículos del contrato","Garantías", "Documentos","Ejecución", "Hitos", "Modificaciones"],
+    "baja california": { 
+      ico_parties: ["Información de actores", "Punto de Contacto", "Punto de Contacto Adicional"],
+      ico_planning: ["Información de Planeación", "Presupuesto", "Solicitudes de Cotizaciones", "Documentos de planeación", "Hitos de planeación"],
+      ico_tender: ["Información de Contratación", "Artículos","Juntas de aclaraciones", "Licitantes","Documentos de contratación", "Hitos de contratación pública", "Modificaciones de contratación pública"],
+      ico_awards: ["Información de Adjudicación", "Proveedores", "Artículos", "Documentos de adjudicación", "Modificaciones de adjudicación"],
+      ico_contracts: ["Datos generales del contrato", "Artículos del contrato","Garantías", "Documentos","Ejecución", "Hitos", "Modificaciones"],      
     },
-    chiapas: {
-      icon1: ["Información", "Punto de Contacto", "Adicionales"],
-      icon2: ["Información General", "Presupuesto", "Solicitudes de Cotizaciones", "Documentos", "Hitos"],
-      icon3: ["Información General", "Artículos","Juntas de aclaraciones", "Licitantes","Documentos", "Hitos", "Modificaciones"],
-      icon4: ["Información General", "Proveedores", "Artículos", "Documentos", "Modificaciones"],
-      icon5: ["Datos generales del contrato", "Artículos del contrato","Garantías", "Documentos","Ejecución", "Hitos", "Modificaciones"],
+    chiapas: { 
+      ico_parties: ["Información de actores", "Punto de Contacto", "Punto de Contacto Adicional"],
+      ico_planning: ["Información de Planeación", "Presupuesto", "Solicitudes de Cotizaciones", "Documentos de planeación", "Hitos de planeación"],
+      ico_tender: ["Información de Contratación", "Artículos","Juntas de aclaraciones", "Licitantes","Documentos de contratación", "Hitos de contratación pública", "Modificaciones de contratación pública"],
+      ico_awards: ["Información de Adjudicación", "Proveedores", "Artículos", "Documentos de adjudicación", "Modificaciones de adjudicación"],
+      ico_contracts: ["Datos generales del contrato", "Artículos del contrato","Garantías", "Documentos","Ejecución", "Hitos", "Modificaciones"],      
     }
   };
 
