@@ -46,6 +46,30 @@ function downloadFormatter(value, row, index) {
   `;
 }
 
+function initializeMenus() {
+  const icon = 'ico_parties';
+  const entidadInicial = 'aguascalientes';
+
+  ['aguascalientes', 'baja-california', 'chiapas'].forEach(entidad => {
+    changeMenu(icon, entidad);
+  });
+
+  // Marcar el ícono "Actores" como activo al iniciar
+  $(`.horizontal-icons img[alt="${icon}"]`).addClass('active');
+
+  // Mostrar el contenido del primer tab al iniciar
+  changeTabContent('Información de actores', entidadInicial);
+
+  // Activar el primer `li` del menú vertical del icono "Actores"
+  $(`#menu-${entidadInicial} .nav-link:first`).addClass('active');
+}
+
+function setActiveMenuItem(entidad, menuItem) {
+  const menu = $(`#menu-${entidad}`);
+  menu.find('.nav-link').removeClass('active');
+  menu.find(`.nav-link:contains("${menuItem}")`).addClass('active');
+}
+
 function changeMenu(icon, entidad) {
   const menus = {
     aguascalientes: {
@@ -71,32 +95,43 @@ function changeMenu(icon, entidad) {
     }
   };
 
-  // Clear existing menu items
   const menu = $(`#menu-${entidad}`);
   menu.empty();
 
-  // Add new menu items based on the selected icon
-  menus[entidad][icon].forEach(item => {
-    menu.append(`<li class="nav-item"><a class="nav-link" href="#" onclick="changeTabContent('${item}', '${entidad}')">${item}</a></li>`);
-  });
+  if (menus[entidad] && menus[entidad][icon]) {
+    menus[entidad][icon].forEach(item => {
+      menu.append(`<li class="nav-item"><a class="nav-link" href="#" onclick="changeTabContent('${item}', '${entidad}')">${item}</a></li>`);
+    });
 
-  // Add event listener for the new items
-  menu.find('.nav-link').on('click', function() {
-    menu.find('.nav-link').removeClass('active');
-    $(this).addClass('active');
-  });
+    menu.find('.nav-link').on('click', function() {
+      menu.find('.nav-link').removeClass('active');
+      $(this).addClass('active');
+    });
 
-  // Update active icon
-  $(`.horizontal-icons img`).removeClass('active');
-  $(`.horizontal-icons img[alt="${icon}"]`).addClass('active');
+    $(`.horizontal-icons img`).removeClass('active');
+    $(`.horizontal-icons img[alt="${icon}"]`).addClass('active');
+  } else {
+    console.error(`El icono ${icon} no está definido para la entidad ${entidad}.`);
+  }
 }
 
 
-
 function initializeMenus() {
+  const icon = 'ico_parties';
+  const entidadInicial = 'aguascalientes';
+
   ['aguascalientes', 'baja-california', 'chiapas'].forEach(entidad => {
-    changeMenu('icon1', entidad);
+    changeMenu(icon, entidad);
   });
+
+  // Marcar el ícono "Actores" como activo al iniciar
+  $(`.horizontal-icons img[alt="${icon}"]`).addClass('active');
+
+  // Mostrar el contenido del primer tab al iniciar
+  changeTabContent('Información de actores', entidadInicial);
+
+  // Activar el primer `li` del menú vertical del icono "Actores"
+  $(`#menu-${entidadInicial} .nav-link:first`).addClass('active');
 }
 
 function changeTabContent(title, entidad) {
@@ -171,12 +206,6 @@ function changeTabContent(title, entidad) {
   `;
   $(`#v-pills-tabContent-${entidad}`).html(tabContent);
 }
-
-// Call initializeMenus on page load
-$(document).ready(function() {
-  initializeMenus();
-});
-
 
 // Call initializeMenus on page load
 $(document).ready(function() {
